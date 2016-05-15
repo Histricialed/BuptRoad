@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "BRTakePhotoViewController.h"
+#import "BRMapViewController.h"
+#import "BRListTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    NSBundle *appBundle = [NSBundle mainBundle];
+    
+    
+    BRTakePhotoViewController *tpVC = [[BRTakePhotoViewController alloc] initWithNibName:@"BRTakePhotoViewController" bundle:appBundle];
+    
+    BRListTableViewController *listVC = [[BRListTableViewController alloc] initWithNibName:@"BRListTableViewController" bundle:appBundle];
+    
+    BRMapViewController *mapVC = [[BRMapViewController alloc] initWithNibName:@"BRMapViewController" bundle:appBundle];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[tpVC,listVC,mapVC];
+    self.window.rootViewController = tabBarController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

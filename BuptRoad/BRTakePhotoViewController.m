@@ -7,8 +7,10 @@
 //
 
 #import "BRTakePhotoViewController.h"
+#import "UIImagePickerController+Addition.h"
 
 @interface BRTakePhotoViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *takePhotoBtn;
 
 @end
 
@@ -17,6 +19,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (IBAction)takePhoto:(id)sender {
+    UIImagePickerController *picker = [UIImagePickerController imagePickerControllerWithType:ImagePickerViewTypeContract finishBlock:^(UIImage *imageInfo) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImage *image = imageInfo;
+            if (!image || image.size.width == 0 || image.size.height == 0) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"获取照片错误");
+                });
+            }
+            NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+            dispatch_async(dispatch_get_main_queue(), ^{
+//                self.imageView.image = [UIImage imageWithData:imageData];
+            });
+        });
+    }];
+    //picker.delegate = self;
+    [self presentViewController:picker animated:YES completion:^{}];//进入照相界面
+
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

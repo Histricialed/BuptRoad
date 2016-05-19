@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82BC34ED1CEDC1A100E8E7A6 /* CustomImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */; };
+		82BC34EE1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BC34EC1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m */; };
 		82F19F131CE42B2A0025E75B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F19F121CE42B2A0025E75B /* main.m */; };
 		82F19F161CE42B2A0025E75B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F19F151CE42B2A0025E75B /* AppDelegate.m */; };
 		82F19F1F1CE42B2A0025E75B /* BuptRoad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82F19F1D1CE42B2A0025E75B /* BuptRoad.xcdatamodeld */; };
@@ -40,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82BC34E91CEDC1A100E8E7A6 /* CustomImagePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImagePickerView.h; sourceTree = "<group>"; };
+		82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImagePickerView.m; sourceTree = "<group>"; };
+		82BC34EB1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Addition.h"; sourceTree = "<group>"; };
+		82BC34EC1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Addition.m"; sourceTree = "<group>"; };
 		82F19F0E1CE42B2A0025E75B /* BuptRoad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuptRoad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F19F121CE42B2A0025E75B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82F19F141CE42B2A0025E75B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +173,10 @@
 				82F19F471CE5D32C0025E75B /* BRTakePhotoViewController.h */,
 				82F19F481CE5D32C0025E75B /* BRTakePhotoViewController.m */,
 				82F19F491CE5D32C0025E75B /* BRTakePhotoViewController.xib */,
+				82BC34E91CEDC1A100E8E7A6 /* CustomImagePickerView.h */,
+				82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */,
+				82BC34EB1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.h */,
+				82BC34EC1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m */,
 			);
 			name = TakePhoto;
 			sourceTree = "<group>";
@@ -258,7 +268,7 @@
 				TargetAttributes = {
 					82F19F0D1CE42B2A0025E75B = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 28UUJY53L8;
+						DevelopmentTeam = 6CJH7SB2KM;
 					};
 					82F19F291CE42B2A0025E75B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -326,6 +336,8 @@
 			files = (
 				82F19F4A1CE5D32C0025E75B /* BRTakePhotoViewController.m in Sources */,
 				82F19F161CE42B2A0025E75B /* AppDelegate.m in Sources */,
+				82BC34ED1CEDC1A100E8E7A6 /* CustomImagePickerView.m in Sources */,
+				82BC34EE1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m in Sources */,
 				82F19F521CE5DBFA0025E75B /* BRMapViewController.m in Sources */,
 				82F19F581CE5E1550025E75B /* BRListTableViewController.m in Sources */,
 				82F19F1F1CE42B2A0025E75B /* BuptRoad.xcdatamodeld in Sources */,
@@ -467,7 +479,7 @@
 				INFOPLIST_FILE = BuptRoad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lianjia.jiaxin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lianjia.HypnoNerd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -482,7 +494,7 @@
 				INFOPLIST_FILE = BuptRoad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lianjia.jiaxin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lianjia.HypnoNerd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		82BC34ED1CEDC1A100E8E7A6 /* CustomImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */; };
 		82BC34EE1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BC34EC1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m */; };
+		82BC34F01CEDC55600E8E7A6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC34EF1CEDC55500E8E7A6 /* CoreLocation.framework */; };
+		82F01A531CF307EF000C3C5D /* BRAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F01A521CF307EF000C3C5D /* BRAreaModel.m */; };
 		82F19F131CE42B2A0025E75B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F19F121CE42B2A0025E75B /* main.m */; };
 		82F19F161CE42B2A0025E75B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F19F151CE42B2A0025E75B /* AppDelegate.m */; };
 		82F19F1F1CE42B2A0025E75B /* BuptRoad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82F19F1D1CE42B2A0025E75B /* BuptRoad.xcdatamodeld */; };
@@ -46,6 +48,9 @@
 		82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImagePickerView.m; sourceTree = "<group>"; };
 		82BC34EB1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Addition.h"; sourceTree = "<group>"; };
 		82BC34EC1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Addition.m"; sourceTree = "<group>"; };
+		82BC34EF1CEDC55500E8E7A6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		82F01A511CF307EF000C3C5D /* BRAreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAreaModel.h; sourceTree = "<group>"; };
+		82F01A521CF307EF000C3C5D /* BRAreaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAreaModel.m; sourceTree = "<group>"; };
 		82F19F0E1CE42B2A0025E75B /* BuptRoad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuptRoad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F19F121CE42B2A0025E75B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82F19F141CE42B2A0025E75B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82BC34F01CEDC55600E8E7A6 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +102,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82F01A501CF307BF000C3C5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82F01A511CF307EF000C3C5D /* BRAreaModel.h */,
+				82F01A521CF307EF000C3C5D /* BRAreaModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		82F19F051CE42B2A0025E75B = {
 			isa = PBXGroup;
 			children = (
+				82BC34EF1CEDC55500E8E7A6 /* CoreLocation.framework */,
 				82F19F101CE42B2A0025E75B /* BuptRoad */,
 				82F19F2D1CE42B2A0025E75B /* BuptRoadTests */,
 				82F19F381CE42B2A0025E75B /* BuptRoadUITests */,
@@ -123,6 +139,7 @@
 				82F19F151CE42B2A0025E75B /* AppDelegate.m */,
 				82F19F201CE42B2A0025E75B /* Assets.xcassets */,
 				82F19F221CE42B2A0025E75B /* LaunchScreen.storyboard */,
+				82F01A501CF307BF000C3C5D /* Models */,
 				82F19F4C1CE5D3390025E75B /* TabBar */,
 				82F19F251CE42B2A0025E75B /* Info.plist */,
 				82F19F1D1CE42B2A0025E75B /* BuptRoad.xcdatamodeld */,
@@ -338,6 +355,7 @@
 				82F19F161CE42B2A0025E75B /* AppDelegate.m in Sources */,
 				82BC34ED1CEDC1A100E8E7A6 /* CustomImagePickerView.m in Sources */,
 				82BC34EE1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m in Sources */,
+				82F01A531CF307EF000C3C5D /* BRAreaModel.m in Sources */,
 				82F19F521CE5DBFA0025E75B /* BRMapViewController.m in Sources */,
 				82F19F581CE5E1550025E75B /* BRListTableViewController.m in Sources */,
 				82F19F1F1CE42B2A0025E75B /* BuptRoad.xcdatamodeld in Sources */,

@@ -10,6 +10,7 @@
 #import "BRTakePhotoViewController.h"
 #import "BRMapViewController.h"
 #import "BRListTableViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface AppDelegate ()
 
@@ -34,6 +35,7 @@
     self.window.rootViewController = tabBarController;
     
     self.window.backgroundColor = [UIColor whiteColor];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

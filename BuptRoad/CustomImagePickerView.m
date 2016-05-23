@@ -7,6 +7,8 @@
 //
 
 #import "CustomImagePickerView.h"
+#import <CoreLocation/CoreLocation.h>
+#import "BRAreaModel.h"
 
 #define SCREEN_WIDTH  CGRectGetWidth([[UIScreen mainScreen] bounds])
 #define SCREEN_HEIGHT CGRectGetHeight([[UIScreen mainScreen] bounds])
@@ -20,6 +22,9 @@
 @property (nonatomic, weak) UIButton *usePhotoBtn;
 @property (nonatomic, strong) UIImage *imageInfo;
 @property (nonatomic, weak) UIImageView *mask;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) BRAreaModel *area;
+
 @end
 
 @implementation CustomImagePickerView
@@ -28,6 +33,14 @@
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
     }
+    
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter = 10.f;
+    self.locationManager.headingFilter = 5.0f;
+    [self.locationManager requestWhenInUseAuthorization];
+
     return self;
 }
 
@@ -56,8 +69,9 @@
     UILabel *tipLabel = [[UILabel alloc] init];
     self.tipLabel = tipLabel;
     [self addSubview:self.tipLabel];
-
-    
+    self.area = [[BRAreaModel alloc] init];
+//    self.area.radius = 0.011764;
+    self.area.radius = 0.03;
 
 }
 
@@ -106,6 +120,35 @@
 
 - (void)shutterCamera {
     [self.imageViewController takePicture];
+    [self.locationManager startUpdatingLocation];
+    [self.locationManager startUpdatingHeading];
+
+//    double x = 39.9973712933;
+//    double y = 116.3350445980;
+    
+//    NSLog(@"%@",[self.area isPoint:x and:y InArea:self.area]?@"YES":@"NO");
+    //算法
+//    [self.locationManager stopUpdatingHeading];
+//    [self.locationManager stopUpdatingLocation];//或者写在上面的算法内
+}
+
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(nonnull CLHeading *)newHeading {
+    self.area.currentHeading = newHeading;
+    NSLog(@"heading---%f",newHeading.trueHeading);
+}
+
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    CLLocation *currLocation=[locations lastObject];
+    
+//    location.strLatitude=[NSString stringWithFormat:@"%f",currLocation.coordinate.latitude];
+//    location.strLongitude=[NSString stringWithFormat:@"%f",currLocation.coordinate.longitude];
+    self.area.currentLocation = currLocation;
+    NSLog(@"la---%f, lo---%f",currLocation.coordinate.latitude,currLocation.coordinate.longitude);
+    double x = 39.9973712933;
+    double y = 116.3350445980;
+    NSLog(@"%@",[self.area isPoint:x and:y InArea:self.area]?@"YES":@"NO");
 }
 
 - (void)cancle:(UIButton *)sender {

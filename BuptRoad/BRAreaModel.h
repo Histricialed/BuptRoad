@@ -16,6 +16,6 @@
 @property (nonatomic, assign) double radius;
 
 - (instancetype)init;
-- (BOOL)isPoint:(double)x and:(double)y InArea:(BRAreaModel *)area;
+- (BOOL)isPoint:(double)latitude and:(double)longtitude InArea:(BRAreaModel *)area;
 
 @end

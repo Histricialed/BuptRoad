@@ -9,6 +9,8 @@
 #import "CustomImagePickerView.h"
 #import <CoreLocation/CoreLocation.h>
 #import "BRAreaModel.h"
+#import "Masonry.h"
+#import "CONST.h"
 
 #define SCREEN_WIDTH  CGRectGetWidth([[UIScreen mainScreen] bounds])
 #define SCREEN_HEIGHT CGRectGetHeight([[UIScreen mainScreen] bounds])
@@ -16,6 +18,7 @@
 @interface CustomImagePickerView ()
 
 @property (nonatomic, weak) UILabel *tipLabel;
+@property (nonatomic, weak) UILabel *resultLabel;
 @property (nonatomic, weak) UIButton *takePhotoBtn;
 @property (nonatomic, weak) UIButton *cancleBtn;
 @property (nonatomic, weak) UIImageView *photoImageView;
@@ -24,6 +27,7 @@
 @property (nonatomic, weak) UIImageView *mask;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) BRAreaModel *area;
+@property (nonatomic, assign) BOOL isDisplay;
 
 @end
 
@@ -69,9 +73,12 @@
     UILabel *tipLabel = [[UILabel alloc] init];
     self.tipLabel = tipLabel;
     [self addSubview:self.tipLabel];
+    UILabel *resultLabel = [[UILabel alloc] init];
+    self.resultLabel = resultLabel;
+    [self addSubview:self.resultLabel];
     self.area = [[BRAreaModel alloc] init];
 //    self.area.radius = 0.011764;
-    self.area.radius = 0.03;
+    self.area.radius = 0.02;
 
 }
 
@@ -93,6 +100,7 @@
 }
 
 - (void)layoutSubviews {
+    WEAKSELF();
     [super layoutSubviews];
     if (self.imagePickerViewType == ImagePickerViewTypeContract) {
         self.tipLabel.frame = CGRectMake(40, 20, SCREEN_WIDTH - 80, 30);
@@ -102,6 +110,18 @@
     self.tipLabel.text = @"请将建筑物置于取景框中";
     self.tipLabel.textAlignment = NSTextAlignmentCenter;
     self.tipLabel.textColor = [UIColor whiteColor];
+    
+    self.resultLabel.text = @"搜狐网络大厦";
+    self.resultLabel.textAlignment = NSTextAlignmentCenter;
+    self.resultLabel.textColor = [UIColor whiteColor];
+    self.resultLabel.backgroundColor = [UIColor grayColor];
+    [self.resultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakSelf);
+        make.top.equalTo(weakSelf).with.offset(80);
+    }];
+    self.resultLabel.hidden = YES;
+    
+    self.isDisplay = NO;
     
     self.takePhotoBtn.frame = CGRectMake((SCREEN_WIDTH - 80)/2, SCREEN_HEIGHT - 100, 80, 80);
     self.takePhotoBtn.backgroundColor = [UIColor lightGrayColor];
@@ -115,40 +135,37 @@
     self.photoImageView.backgroundColor = [UIColor blackColor];
     self.photoImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.usePhotoBtn.frame = CGRectMake(SCREEN_WIDTH - 110, SCREEN_HEIGHT - 85, 80, 50);
-    [self.usePhotoBtn setTitle:@"使用照片" forState:UIControlStateNormal];
+    [self.usePhotoBtn setTitle:@"确定" forState:UIControlStateNormal];
 }
 
 - (void)shutterCamera {
     [self.imageViewController takePicture];
     [self.locationManager startUpdatingLocation];
     [self.locationManager startUpdatingHeading];
-
-//    double x = 39.9973712933;
-//    double y = 116.3350445980;
     
-//    NSLog(@"%@",[self.area isPoint:x and:y InArea:self.area]?@"YES":@"NO");
-    //算法
-//    [self.locationManager stopUpdatingHeading];
-//    [self.locationManager stopUpdatingLocation];//或者写在上面的算法内
+    double x = 39.9918353308;
+    double y = 116.3262000682;
+    self.isDisplay = [self.area isPoint:x and:y InArea:self.area];
+    if (self.area.currentHeading) {
+        NSLog(@"heading:%f  coordinate:%f,%f result:%@",self.area.currentHeading.trueHeading,self.area.currentLocation.coordinate.latitude,self.area.currentLocation.coordinate.longitude,[self.area isPoint:x and:y InArea:self.area]?@"YES":@"NO");
+    }
 }
 
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(nonnull CLHeading *)newHeading {
+    if (!self.area.currentHeading) {
+        self.area.currentHeading = [[CLHeading alloc] init];
+    }
     self.area.currentHeading = newHeading;
-    NSLog(@"heading---%f",newHeading.trueHeading);
 }
 
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     CLLocation *currLocation=[locations lastObject];
-    
-//    location.strLatitude=[NSString stringWithFormat:@"%f",currLocation.coordinate.latitude];
-//    location.strLongitude=[NSString stringWithFormat:@"%f",currLocation.coordinate.longitude];
+    if (!self.area.currentLocation) {
+        self.area.currentLocation = [[CLLocation alloc] init];
+    }
     self.area.currentLocation = currLocation;
-    NSLog(@"la---%f, lo---%f",currLocation.coordinate.latitude,currLocation.coordinate.longitude);
-    double x = 39.9973712933;
-    double y = 116.3350445980;
-    NSLog(@"%@",[self.area isPoint:x and:y InArea:self.area]?@"YES":@"NO");
 }
 
 - (void)cancle:(UIButton *)sender {
@@ -189,6 +206,7 @@
 - (void)hideControls {
     self.photoImageView.hidden = NO;
     self.usePhotoBtn.hidden = NO;
+    self.resultLabel.hidden = !self.isDisplay;
     self.mask.hidden = YES;
     self.tipLabel.hidden = YES;
     [self.cancleBtn setTitle:@"重拍" forState:UIControlStateNormal];
@@ -200,6 +218,7 @@
     self.photoImageView.image = nil;
     self.photoImageView.hidden = YES;
     self.usePhotoBtn.hidden = YES;
+    self.resultLabel.hidden = YES;
     self.mask.hidden = NO;
     self.tipLabel.hidden = NO;
     [self.cancleBtn setTitle:@"取消" forState:UIControlStateNormal];

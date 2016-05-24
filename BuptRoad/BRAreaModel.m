@@ -9,8 +9,10 @@
 #import "BRAreaModel.h"
 #import <math.h>
 
-// 可视角度的余弦值
-static const double cosTheta = 0.5;
+// 识别范围角度
+static const double Theta = 40;
+static const double latitudeScale = 113.990; //1°纬度约为113.990KM
+static const double longtitudeScale = 86.757; //1°经度约为86.757KM
 
 @implementation BRAreaModel
 
@@ -23,28 +25,30 @@ static const double cosTheta = 0.5;
     return self;
 }
 
-- (BOOL)isPoint:(double)x and:(double)y InArea:(BRAreaModel *)area
+- (BOOL)isPoint:(double)latitude and:(double)longtitude InArea:(BRAreaModel *)area
 {
-    double headingVectorX = sin(area.currentHeading.trueHeading);
-    double headingVectorY = cos(area.currentHeading.trueHeading);
-    double squaredRadius = area.radius * area.radius;
-    
+    double cosTheta = cos(Theta / 2 / (180/3.1415926535));
+    double headingVectorX = sin(area.currentHeading.trueHeading / (180/3.1415926535));
+    double headingVectorY = cos(area.currentHeading.trueHeading / (180/3.1415926535));
+    NSLog(@"headingVectorX  %lf ,headingVectorY  %lf",headingVectorX,headingVectorY);
+    double squaredRadius = area.radius * area.radius * 100 * 100;
+    NSLog(@"squaredRadius = %lf",squaredRadius);
     if (squaredRadius <= 0) {
         return NO;
     }
     
-    double dX = x - area.currentLocation.coordinate.latitude;
-    double dY = y - area.currentLocation.coordinate.longitude;
-    
+    double dX = (longtitude - area.currentLocation.coordinate.longitude) * longtitudeScale;
+    double dY = (latitude - area.currentLocation.coordinate.latitude) * latitudeScale;
+    NSLog(@"dX:%lf,dY:%lf",dX,dY);
     double squaredLength = dX * dX + dY * dY;
-    
+    NSLog(@"squaredLength = %lf",squaredLength);
     if (squaredLength > squaredRadius) {
         return NO;
     }
     
     // D点与朝向向量做点乘
     double DdotHeadingVector = dX * headingVectorX + dY * headingVectorY;
-    
+    NSLog(@"DdotHeadingVector = %lf ,cosTheta = %lf",DdotHeadingVector,cosTheta);
     if (DdotHeadingVector >= 0 && cosTheta >= 0) {
         return DdotHeadingVector * DdotHeadingVector > squaredLength * cosTheta * cosTheta;
     } else if (DdotHeadingVector < 0 && cosTheta < 0) {

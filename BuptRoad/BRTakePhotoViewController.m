@@ -36,7 +36,6 @@
             });
         });
     }];
-    //picker.delegate = self;
     [self presentViewController:picker animated:YES completion:^{}];//进入照相界面
 
 }

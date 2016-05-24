@@ -9,29 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BuptRoad/CustomImagePickerView.m"
-            timestampString = "485711903.784677"
+            filePath = "BuptRoad/BRAreaModel.m"
+            timestampString = "485793633.691041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-shutterCamera"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BuptRoad/CustomImagePickerView.m"
-            timestampString = "485711903.784677"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "-locationManager:didUpdateLocations:"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-isPoint:and:InArea:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

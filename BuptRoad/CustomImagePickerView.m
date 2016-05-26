@@ -79,6 +79,8 @@
     self.area = [[BRAreaModel alloc] init];
 //    self.area.radius = 0.011764;
     self.area.radius = 0.02;
+    [self.locationManager startUpdatingLocation];
+    [self.locationManager startUpdatingHeading];
 
 }
 
@@ -140,8 +142,6 @@
 
 - (void)shutterCamera {
     [self.imageViewController takePicture];
-    [self.locationManager startUpdatingLocation];
-    [self.locationManager startUpdatingHeading];
     
     double x = 39.9918353308;
     double y = 116.3262000682;

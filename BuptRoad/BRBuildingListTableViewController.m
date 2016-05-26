@@ -1,38 +1,45 @@
 //
-//  BRListTableViewController.m
+//  BRBuildingListTableViewController.m
 //  BuptRoad
 //
-//  Created by 李志强 on 16/5/13.
+//  Created by 李志强 on 16/5/26.
 //  Copyright © 2016年 LaFleur. All rights reserved.
 //
 
-#import "BRListTableViewController.h"
+#import "BRBuildingListTableViewController.h"
+#import "BRBuildingCell.h"
 
-@interface BRListTableViewController ()
+@interface BRBuildingListTableViewController ()
 
 @end
 
-@implementation BRListTableViewController
+@implementation BRBuildingListTableViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.tabBarItem.title = @"拍照";
+        UIImage *tabIcon = [UIImage imageNamed:@"icon_tabbar_camera"];
+        self.tabBarItem.image = tabIcon;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UINib *nib = [UINib nibWithNibName:@"BRBuildingCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"BRBuildingCell"];
+    
+    self.navigationItem.title = @"建筑列表";
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:65/255.0 green:244/255.0 blue:180/255.0 alpha:1.0];
+    self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:55/255.0 green:205/255.0 blue:151/255.0 alpha:1.0];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.tabBarItem.title = @"列表";
-        UIImage *tabIcon = [UIImage imageNamed:@"icon_tabbar_list"];
-        self.tabBarItem.image = tabIcon;
-    }
-    return self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,15 +59,15 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    BRBuildingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BRBuildingCell    " forIndexPath:indexPath];
     
-    // Configure the cell...
+    
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -93,22 +100,6 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 */
 

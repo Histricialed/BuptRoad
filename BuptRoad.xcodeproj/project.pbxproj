@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00D8DE90AA378EBE60E31ED2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BAF15886A63592C3A37BB2 /* libPods.a */; };
+		820567621CF6D04100EF1768 /* buildinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 820567611CF6D04100EF1768 /* buildinfo.plist */; };
+		820567701CF6FABC00EF1768 /* BRBuildingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205676E1CF6FABC00EF1768 /* BRBuildingCell.m */; };
+		820567711CF6FABC00EF1768 /* BRBuildingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8205676F1CF6FABC00EF1768 /* BRBuildingCell.xib */; };
+		820567741CF6FDC800EF1768 /* BRBuildingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 820567731CF6FDC800EF1768 /* BRBuildingListTableViewController.m */; };
 		82BC34ED1CEDC1A100E8E7A6 /* CustomImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */; };
 		82BC34EE1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BC34EC1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m */; };
 		82BC34F01CEDC55600E8E7A6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC34EF1CEDC55500E8E7A6 /* CoreLocation.framework */; };
@@ -23,8 +27,6 @@
 		82F19F4B1CE5D32C0025E75B /* BRTakePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F19F491CE5D32C0025E75B /* BRTakePhotoViewController.xib */; };
 		82F19F521CE5DBFA0025E75B /* BRMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F19F501CE5DBFA0025E75B /* BRMapViewController.m */; };
 		82F19F531CE5DBFA0025E75B /* BRMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F19F511CE5DBFA0025E75B /* BRMapViewController.xib */; };
-		82F19F581CE5E1550025E75B /* BRListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F19F561CE5E1550025E75B /* BRListTableViewController.m */; };
-		82F19F591CE5E1550025E75B /* BRListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F19F571CE5E1550025E75B /* BRListTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		820567611CF6D04100EF1768 /* buildinfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = buildinfo.plist; sourceTree = "<group>"; };
+		8205676D1CF6FABC00EF1768 /* BRBuildingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBuildingCell.h; sourceTree = "<group>"; };
+		8205676E1CF6FABC00EF1768 /* BRBuildingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRBuildingCell.m; sourceTree = "<group>"; };
+		8205676F1CF6FABC00EF1768 /* BRBuildingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRBuildingCell.xib; sourceTree = "<group>"; };
+		820567721CF6FDC800EF1768 /* BRBuildingListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBuildingListTableViewController.h; sourceTree = "<group>"; };
+		820567731CF6FDC800EF1768 /* BRBuildingListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRBuildingListTableViewController.m; sourceTree = "<group>"; };
 		82BC34E91CEDC1A100E8E7A6 /* CustomImagePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImagePickerView.h; sourceTree = "<group>"; };
 		82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImagePickerView.m; sourceTree = "<group>"; };
 		82BC34EB1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Addition.h"; sourceTree = "<group>"; };
@@ -73,9 +81,6 @@
 		82F19F4F1CE5DBFA0025E75B /* BRMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRMapViewController.h; sourceTree = "<group>"; };
 		82F19F501CE5DBFA0025E75B /* BRMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRMapViewController.m; sourceTree = "<group>"; };
 		82F19F511CE5DBFA0025E75B /* BRMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRMapViewController.xib; sourceTree = "<group>"; };
-		82F19F551CE5E1550025E75B /* BRListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRListTableViewController.h; sourceTree = "<group>"; };
-		82F19F561CE5E1550025E75B /* BRListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRListTableViewController.m; sourceTree = "<group>"; };
-		82F19F571CE5E1550025E75B /* BRListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRListTableViewController.xib; sourceTree = "<group>"; };
 		A2AD06EE6C1C4298468183B1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BBEAC8B9E4427AF933F2F757 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F6BAF15886A63592C3A37BB2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +174,7 @@
 				82F19F251CE42B2A0025E75B /* Info.plist */,
 				82F19F1D1CE42B2A0025E75B /* BuptRoad.xcdatamodeld */,
 				82F19F111CE42B2A0025E75B /* Supporting Files */,
+				820567611CF6D04100EF1768 /* buildinfo.plist */,
 			);
 			path = BuptRoad;
 			sourceTree = "<group>";
@@ -237,9 +243,11 @@
 		82F19F541CE5E1380025E75B /* List */ = {
 			isa = PBXGroup;
 			children = (
-				82F19F551CE5E1550025E75B /* BRListTableViewController.h */,
-				82F19F561CE5E1550025E75B /* BRListTableViewController.m */,
-				82F19F571CE5E1550025E75B /* BRListTableViewController.xib */,
+				8205676D1CF6FABC00EF1768 /* BRBuildingCell.h */,
+				8205676E1CF6FABC00EF1768 /* BRBuildingCell.m */,
+				8205676F1CF6FABC00EF1768 /* BRBuildingCell.xib */,
+				820567721CF6FDC800EF1768 /* BRBuildingListTableViewController.h */,
+				820567731CF6FDC800EF1768 /* BRBuildingListTableViewController.m */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -352,10 +360,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				82F19F241CE42B2A0025E75B /* LaunchScreen.storyboard in Resources */,
+				820567711CF6FABC00EF1768 /* BRBuildingCell.xib in Resources */,
 				82F19F531CE5DBFA0025E75B /* BRMapViewController.xib in Resources */,
 				82F19F4B1CE5D32C0025E75B /* BRTakePhotoViewController.xib in Resources */,
 				82F19F211CE42B2A0025E75B /* Assets.xcassets in Resources */,
-				82F19F591CE5E1550025E75B /* BRListTableViewController.xib in Resources */,
+				820567621CF6D04100EF1768 /* buildinfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,13 +437,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820567701CF6FABC00EF1768 /* BRBuildingCell.m in Sources */,
 				82F19F4A1CE5D32C0025E75B /* BRTakePhotoViewController.m in Sources */,
 				82F19F161CE42B2A0025E75B /* AppDelegate.m in Sources */,
+				820567741CF6FDC800EF1768 /* BRBuildingListTableViewController.m in Sources */,
 				82BC34ED1CEDC1A100E8E7A6 /* CustomImagePickerView.m in Sources */,
 				82BC34EE1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m in Sources */,
 				82F01A531CF307EF000C3C5D /* BRAreaModel.m in Sources */,
 				82F19F521CE5DBFA0025E75B /* BRMapViewController.m in Sources */,
-				82F19F581CE5E1550025E75B /* BRListTableViewController.m in Sources */,
 				82F19F1F1CE42B2A0025E75B /* BuptRoad.xcdatamodeld in Sources */,
 				82F19F131CE42B2A0025E75B /* main.m in Sources */,
 			);

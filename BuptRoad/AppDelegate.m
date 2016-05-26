@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "BRTakePhotoViewController.h"
 #import "BRMapViewController.h"
-#import "BRListTableViewController.h"
+#import "BRBuildingListTableViewController.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface AppDelegate ()
@@ -25,13 +25,17 @@
     
     
     BRTakePhotoViewController *tpVC = [[BRTakePhotoViewController alloc] initWithNibName:@"BRTakePhotoViewController" bundle:appBundle];
+    UINavigationController *tpNav =[[UINavigationController alloc] initWithRootViewController:tpVC];
     
-    BRListTableViewController *listVC = [[BRListTableViewController alloc] initWithNibName:@"BRListTableViewController" bundle:appBundle];
+    BRBuildingListTableViewController *buildingListVC = [[BRBuildingListTableViewController alloc] init];
+    UINavigationController *buildingListNav = [[UINavigationController alloc] initWithRootViewController:buildingListVC];
     
     BRMapViewController *mapVC = [[BRMapViewController alloc] initWithNibName:@"BRMapViewController" bundle:appBundle];
+    UINavigationController *mapNav = [[UINavigationController alloc] initWithRootViewController:mapVC];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[tpVC,listVC,mapVC];
+    tabBarController.viewControllers = @[tpNav,buildingListNav,mapNav];
+    
     self.window.rootViewController = tabBarController;
     
     self.window.backgroundColor = [UIColor whiteColor];

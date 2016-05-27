@@ -8,6 +8,8 @@
 
 #import "BRBuildingListTableViewController.h"
 #import "BRBuildingCell.h"
+#import "BRBuildingModelStore.h"
+#import "BRBuildingModel.h"
 
 @interface BRBuildingListTableViewController ()
 
@@ -19,9 +21,12 @@
 {
     self = [super init];
     if (self) {
-        self.tabBarItem.title = @"拍照";
+        self.tabBarItem.title = @"建筑列表";
         UIImage *tabIcon = [UIImage imageNamed:@"icon_tabbar_camera"];
         self.tabBarItem.image = tabIcon;
+        for (int i = 0; i < 13; i++) {
+            [[BRBuildingModelStore sharedStore] createItemByBuildingID:[NSString stringWithFormat:@"%d",i]];
+        }
     }
     return self;
 }
@@ -35,11 +40,9 @@
     self.navigationItem.title = @"建筑列表";
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:65/255.0 green:244/255.0 blue:180/255.0 alpha:1.0];
     self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:55/255.0 green:205/255.0 blue:151/255.0 alpha:1.0];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,25 +52,29 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[[BRBuildingModelStore sharedStore] allItems] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BRBuildingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BRBuildingCell    " forIndexPath:indexPath];
-    
-    
+    BRBuildingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BRBuildingCell" forIndexPath:indexPath];
+    NSArray *buildings = [[BRBuildingModelStore sharedStore] allItems];
+    BRBuildingModel *building = buildings[indexPath.row];
+    cell.buildingName.text = building.buildingName;
+    [cell.buildingImage setImage:[UIImage imageNamed:building.imageName]];
+    cell.location.text = building.position;
+    cell.function.text = building.function;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 101;
+}
 
 /*
 // Override to support conditional editing of the table view.

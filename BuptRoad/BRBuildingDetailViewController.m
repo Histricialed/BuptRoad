@@ -9,7 +9,10 @@
 #import "BRBuildingDetailViewController.h"
 #import "BRBuildingModel.h"
 
+
 @interface BRBuildingDetailViewController ()
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *bigImage;
 @property (weak, nonatomic) IBOutlet UILabel *doorDirection;
 @property (weak, nonatomic) IBOutlet UILabel *position;
@@ -29,6 +32,10 @@
     self.navigationItem.title = self.buildingModel.buildingName;
     [self initLabels];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)initLabels {

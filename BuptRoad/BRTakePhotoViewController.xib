@@ -30,8 +30,8 @@
                         <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="dH7-l5-iN5"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击拍照按钮进入建筑物识别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCi-Xu-dGM">
-                    <rect key="frame" x="77" y="400" width="221" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击进入建筑物识别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCi-Xu-dGM">
+                    <rect key="frame" x="111" y="370" width="153" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.25490196079999999" green="0.86534114275100504" blue="0.73398637974563752" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                 <constraint firstItem="vCi-Xu-dGM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5kT-nV-IDK"/>
                 <constraint firstItem="XXh-a2-M4D" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="gAM-AX-ZXf"/>
                 <constraint firstItem="XXh-a2-M4D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tAi-5t-KTh"/>
-                <constraint firstItem="vCi-Xu-dGM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="77" id="ysk-Ix-Zfi"/>
+                <constraint firstItem="vCi-Xu-dGM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="47" id="ysk-Ix-Zfi"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="560.5" y="495.5"/>

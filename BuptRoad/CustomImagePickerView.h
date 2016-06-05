@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "UIImagePickerController+Addition.h"
 
+
+
 @interface CustomImagePickerView : UIView<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, assign) ImagePickerViewType imagePickerViewType;

@@ -11,8 +11,10 @@
 #import "BRAreaModel.h"
 #import "BRMatchingModel.h"
 #import "BRBuildingModel.h"
+#import "BRBuildingDetailViewController.h"
 #import "Masonry.h"
 #import "CONST.h"
+
 
 #define SCREEN_WIDTH  CGRectGetWidth([[UIScreen mainScreen] bounds])
 #define SCREEN_HEIGHT CGRectGetHeight([[UIScreen mainScreen] bounds])
@@ -20,7 +22,7 @@
 @interface CustomImagePickerView ()
 
 @property (nonatomic, weak) UILabel *tipLabel;
-@property (nonatomic, weak) UILabel *resultLabel;
+@property (nonatomic, weak) UIButton *resultLabel;
 @property (nonatomic, weak) UIButton *takePhotoBtn;
 @property (nonatomic, weak) UIButton *cancleBtn;
 @property (nonatomic, weak) UIImageView *photoImageView;
@@ -40,7 +42,6 @@
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
     }
-    
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -76,16 +77,24 @@
     UILabel *tipLabel = [[UILabel alloc] init];
     self.tipLabel = tipLabel;
     [self addSubview:self.tipLabel];
-    UILabel *resultLabel = [[UILabel alloc] init];
+    UIButton *resultLabel = [[UIButton alloc] init];
     self.resultLabel = resultLabel;
+    [self.resultLabel addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.resultLabel];
     self.area = [[BRAreaModel alloc] init];
-//    self.area.radius = 0.011764;
     self.area.radius = 0.02;
     [self.locationManager startUpdatingLocation];
     [self.locationManager startUpdatingHeading];
 
 }
+
+-(void)clickButton:(id)sender{
+    BRBuildingDetailViewController *vc = [[BRBuildingDetailViewController alloc]init];
+    vc.buildingModel = self.matchedBuilding;
+    [self.imageViewController pushViewController:vc animated:YES];
+    }
+    
+
 
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -116,8 +125,8 @@
     self.tipLabel.textAlignment = NSTextAlignmentCenter;
     self.tipLabel.textColor = [UIColor whiteColor];
     
-    self.resultLabel.textAlignment = NSTextAlignmentCenter;
-    self.resultLabel.textColor = [UIColor whiteColor];
+    self.resultLabel.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.resultLabel.titleLabel.textColor = [UIColor whiteColor];
     self.resultLabel.backgroundColor = [UIColor grayColor];
     [self.resultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(weakSelf);
@@ -146,10 +155,10 @@
 
 - (void)shutterCamera {
     [self.imageViewController takePicture];
-    self.resultLabel.text = @"没有匹配到建筑物";
+    [self.resultLabel setTitle:@"没有匹配到建筑物" forState:UIControlStateNormal];
     self.matchedBuilding = [[BRMatchingModel sharedInstance] matchingBuildingsInArea:self.area];
     if (self.matchedBuilding) {
-        self.resultLabel.text = self.matchedBuilding.buildingName;
+        [self.resultLabel setTitle:self.matchedBuilding.buildingName forState:UIControlStateNormal];
     }
 }
 

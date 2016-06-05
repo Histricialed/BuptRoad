@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BRBuildingModel;
+
 @interface BRBuildingDetailViewController : UIViewController
+
+@property (nonatomic, strong) BRBuildingModel *buildingModel;
 
 @end

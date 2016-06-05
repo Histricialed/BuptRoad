@@ -10,6 +10,7 @@
 #import "BRBuildingCell.h"
 #import "BRBuildingModelStore.h"
 #import "BRBuildingModel.h"
+#import "BRBuildingDetailViewController.h"
 
 @interface BRBuildingListTableViewController ()
 
@@ -22,7 +23,7 @@
     self = [super init];
     if (self) {
         self.tabBarItem.title = @"建筑列表";
-        UIImage *tabIcon = [UIImage imageNamed:@"icon_tabbar_camera"];
+        UIImage *tabIcon = [UIImage imageNamed:@"icon_tabbar_list"];
         self.tabBarItem.image = tabIcon;
         for (int i = 0; i < 23; i++) {
             [[BRBuildingModelStore sharedStore] createItemByBuildingID:[NSString stringWithFormat:@"%d",i]];
@@ -63,7 +64,11 @@
     NSArray *buildings = [[BRBuildingModelStore sharedStore] allItems];
     BRBuildingModel *building = buildings[indexPath.row];
     cell.buildingName.text = building.buildingName;
-    [cell.buildingImage setImage:[UIImage imageNamed:building.imageName]];
+    if ([building.imageName length]) {
+        [cell.buildingImage setImage:[UIImage imageNamed:building.imageName]];
+    } else {
+        [cell.buildingImage setImage:[UIImage imageNamed:@"noimage"]];
+    }
     cell.location.text = building.position;
     cell.function.text = building.function;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -73,6 +78,15 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 110;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BRBuildingModel *building = [[[BRBuildingModelStore sharedStore] allItems] objectAtIndex:indexPath.row];
+    
+    BRBuildingDetailViewController *vc = [[BRBuildingDetailViewController alloc]init];
+    vc.buildingModel = building;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

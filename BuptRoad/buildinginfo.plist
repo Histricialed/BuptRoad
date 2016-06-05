@@ -7,9 +7,9 @@
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string>zhulou</string>
 		<key>detailImageName</key>
-		<string></string>
+		<string>Bzhulou</string>
 		<key>buildingName</key>
 		<string>主教学楼</string>
 		<key>latitude</key>
@@ -17,28 +17,28 @@
 		<key>longtitude</key>
 		<string>116.3522121461</string>
 		<key>openTime</key>
-		<string>07：00AM</string>
+		<string>06：30AM</string>
 		<key>closeTime</key>
-		<string>22：00PM</string>
+		<string>22：30PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>15</string>
 		<key>doorDirection</key>
 		<string>西</string>
 		<key>position</key>
 		<string>学校中部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>自习/实验室</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>主楼正对主席像</string>
 	</dict>
 	<key>building - 1</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string>tushuguan</string>
 		<key>detailImageName</key>
-		<string></string>
+		<string>Btushuguan</string>
 		<key>buildingName</key>
 		<string>图书馆</string>
 		<key>latitude</key>
@@ -56,18 +56,18 @@
 		<key>position</key>
 		<string>学校中部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>阅览/自习</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>图书借阅时间每天都不一定，具体参考图书馆网站。</string>
 	</dict>
 	<key>building - 2</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string>jiaosan</string>
 		<key>detailImageName</key>
-		<string></string>
+		<string>Bjiaosan</string>
 		<key>buildingName</key>
 		<string>教三楼</string>
 		<key>latitude</key>
@@ -75,26 +75,171 @@
 		<key>longtitude</key>
 		<string>116.3502001461</string>
 		<key>openTime</key>
-		<string>07：00AM</string>
+		<string>06：30AM</string>
 		<key>closeTime</key>
-		<string>22：00PM</string>
+		<string>22：30PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>10</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>北</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校南部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>自习/教室</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>教三楼五层以上是各学院办公室、教务、实验室</string>
 	</dict>
 	<key>building - 3</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string>kexuehuitang</string>
+		<key>detailImageName</key>
+		<string>Bkexuehuitang</string>
+		<key>buildingName</key>
+		<string>科学会堂</string>
+		<key>latitude</key>
+		<string>39.9596037742</string>
+		<key>longtitude</key>
+		<string>116.3529132963</string>
+		<key>openTime</key>
+		<string>不固定时间</string>
+		<key>closeTime</key>
+		<string>不固定时间</string>
+		<key>totalFloor</key>
+		<string>2</string>
+		<key>doorDirection</key>
+		<string>南</string>
+		<key>position</key>
+		<string>学校东南</string>
+		<key>function</key>
+		<string>会堂</string>
+		<key>remark</key>
+		<string>举办各种典礼、讲座，上下有两层。</string>
+	</dict>
+	<key>building - 4</key>
+	<dict>
+		<key>buildingID</key>
+		<string>0</string>
+		<key>imageName</key>
+		<string>tiyuguan</string>
+		<key>detailImageName</key>
+		<string>Btiyuguan</string>
+		<key>buildingName</key>
+		<string>体育馆</string>
+		<key>latitude</key>
+		<string>39.9604677742</string>
+		<key>longtitude</key>
+		<string>116.3535422963</string>
+		<key>openTime</key>
+		<string>08：00AM</string>
+		<key>closeTime</key>
+		<string>22：00PM</string>
+		<key>totalFloor</key>
+		<string>3</string>
+		<key>doorDirection</key>
+		<string>西</string>
+		<key>position</key>
+		<string>学校东部</string>
+		<key>function</key>
+		<string>运动场所</string>
+		<key>remark</key>
+		<string>内部有健身房、乒乓球室、羽毛球场地。羽毛球场地需要打电话预约。</string>
+	</dict>
+	<key>building - 5</key>
+	<dict>
+		<key>buildingID</key>
+		<string>0</string>
+		<key>imageName</key>
+		<string>youyongguan</string>
+		<key>detailImageName</key>
+		<string>Byouyongguan</string>
+		<key>buildingName</key>
+		<string>游泳馆</string>
+		<key>latitude</key>
+		<string>39.9605507742</string>
+		<key>longtitude</key>
+		<string>116.3545212963</string>
+		<key>openTime</key>
+		<string>10：00AM</string>
+		<key>closeTime</key>
+		<string>22：00PM</string>
+		<key>totalFloor</key>
+		<string>2</string>
+		<key>doorDirection</key>
+		<string>北</string>
+		<key>position</key>
+		<string>学校东门</string>
+		<key>function</key>
+		<string>游泳</string>
+		<key>remark</key>
+		<string>需要在体育馆内部办卡、充钱，洗澡也是在体育馆内充值。</string>
+	</dict>
+	<key>building - 6</key>
+	<dict>
+		<key>buildingID</key>
+		<string>0</string>
+		<key>imageName</key>
+		<string>jiaogongcanting</string>
+		<key>detailImageName</key>
+		<string>Bjiaogongcanting</string>
+		<key>buildingName</key>
+		<string>教工餐厅</string>
+		<key>latitude</key>
+		<string>39.9620437742</string>
+		<key>longtitude</key>
+		<string>116.3524432963</string>
+		<key>openTime</key>
+		<string>10：00AM</string>
+		<key>closeTime</key>
+		<string>22：00PM</string>
+		<key>totalFloor</key>
+		<string>1</string>
+		<key>doorDirection</key>
+		<string>东</string>
+		<key>position</key>
+		<string>学校东北</string>
+		<key>function</key>
+		<string>餐厅</string>
+		<key>remark</key>
+		<string>经常有活动，环境不错。</string>
+	</dict>
+	<key>building - 7</key>
+	<dict>
+		<key>buildingID</key>
+		<string>0</string>
+		<key>imageName</key>
+		<string>xiaoyiyuan</string>
+		<key>detailImageName</key>
+		<string>Bxiaoyiyuan</string>
+		<key>buildingName</key>
+		<string>校医院</string>
+		<key>latitude</key>
+		<string>39.9586074982</string>
+		<key>longtitude</key>
+		<string>116.3507571461</string>
+		<key>openTime</key>
+		<string>07：00AM</string>
+		<key>closeTime</key>
+		<string>22：00PM</string>
+		<key>totalFloor</key>
+		<string>4</string>
+		<key>doorDirection</key>
+		<string>南</string>
+		<key>position</key>
+		<string>学校南部</string>
+		<key>function</key>
+		<string>医院</string>
+		<key>remark</key>
+		<string>看病需要带学生证或学生卡，在学校中门外。</string>
+	</dict>
+	<key>building - 8</key>
+	<dict>
+		<key>buildingID</key>
+		<string>0</string>
+		<key>imageName</key>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -110,20 +255,20 @@
 		<key>totalFloor</key>
 		<string>4</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>北</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校南部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>教室/自习</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string></string>
 	</dict>
-	<key>building - 4</key>
+	<key>building - 9</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -139,20 +284,20 @@
 		<key>totalFloor</key>
 		<string>4</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>南</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校西部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>教室/自习室</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string></string>
 	</dict>
-	<key>building - 5</key>
+	<key>building - 10</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -168,20 +313,20 @@
 		<key>totalFloor</key>
 		<string>4</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>南</string>
 		<key>position</key>
 		<string>学校中部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>教室/自习</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>旁边是财务处</string>
 	</dict>
-	<key>building - 6</key>
+	<key>building - 11</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -191,55 +336,84 @@
 		<key>longtitude</key>
 		<string>116.3517991461</string>
 		<key>openTime</key>
-		<string>07：00AM</string>
+		<string>09：00AM</string>
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
 		<string>4</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>北</string>
 		<key>position</key>
 		<string>学校中部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>行政</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>管理人员办公地点。</string>
 	</dict>
-	<key>building - 7</key>
+	<key>building - 12</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
-		<string>校医院</string>
+		<string>新科研楼</string>
 		<key>latitude</key>
-		<string>39.9586074982</string>
+		<string>39.9627897742</string>
 		<key>longtitude</key>
-		<string>116.3507571461</string>
+		<string>116.3529222963</string>
 		<key>openTime</key>
 		<string>07：00AM</string>
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>14</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>北</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校东北</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>实验室</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string></string>
 	</dict>
-	<key>building - 8</key>
+	<key>building - 13</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
+		<key>detailImageName</key>
+		<string></string>
+		<key>buildingName</key>
+		<string>学生食堂（老食堂）</string>
+		<key>latitude</key>
+		<string>39.9617467742</string>
+		<key>longtitude</key>
+		<string>116.3530752963</string>
+		<key>openTime</key>
+		<string>07：00AM</string>
+		<key>closeTime</key>
+		<string>22：00PM</string>
+		<key>totalFloor</key>
+		<string>3</string>
+		<key>doorDirection</key>
+		<string>南</string>
+		<key>position</key>
+		<string>学校中部</string>
+		<key>function</key>
+		<string>食堂</string>
+		<key>remark</key>
+		<string>篮球场旁边，楼上楼餐厅很不错，适合自习。</string>
+	</dict>
+	<key>building - 14</key>
+	<dict>
+		<key>buildingID</key>
+		<string>0</string>
+		<key>imageName</key>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -255,194 +429,20 @@
 		<key>totalFloor</key>
 		<string>4</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>南</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校南部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>办公</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
-	</dict>
-	<key>building - 9</key>
-	<dict>
-		<key>buildingID</key>
-		<string>0</string>
-		<key>imageName</key>
-		<string>small_0</string>
-		<key>detailImageName</key>
-		<string></string>
-		<key>buildingName</key>
-		<string>科学会堂</string>
-		<key>latitude</key>
-		<string>39.9596037742</string>
-		<key>longtitude</key>
-		<string>116.3529132963</string>
-		<key>openTime</key>
-		<string>07：00AM</string>
-		<key>closeTime</key>
-		<string>22：00PM</string>
-		<key>totalFloor</key>
-		<string>4</string>
-		<key>doorDirection</key>
-		<string>西</string>
-		<key>position</key>
-		<string>学校中部</string>
-		<key>function</key>
-		<string>阅览室 自习室</string>
-		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
-	</dict>
-	<key>building - 10</key>
-	<dict>
-		<key>buildingID</key>
-		<string>0</string>
-		<key>imageName</key>
-		<string>small_0</string>
-		<key>detailImageName</key>
-		<string></string>
-		<key>buildingName</key>
-		<string>体育馆</string>
-		<key>latitude</key>
-		<string>39.9604677742</string>
-		<key>longtitude</key>
-		<string>116.3535422963</string>
-		<key>openTime</key>
-		<string>07：00AM</string>
-		<key>closeTime</key>
-		<string>22：00PM</string>
-		<key>totalFloor</key>
-		<string>4</string>
-		<key>doorDirection</key>
-		<string>西</string>
-		<key>position</key>
-		<string>学校中部</string>
-		<key>function</key>
-		<string>阅览室 自习室</string>
-		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
-	</dict>
-	<key>building - 11</key>
-	<dict>
-		<key>buildingID</key>
-		<string>0</string>
-		<key>imageName</key>
-		<string>small_0</string>
-		<key>detailImageName</key>
-		<string></string>
-		<key>buildingName</key>
-		<string>游泳馆</string>
-		<key>latitude</key>
-		<string>39.9605507742</string>
-		<key>longtitude</key>
-		<string>116.3545212963</string>
-		<key>openTime</key>
-		<string>07：00AM</string>
-		<key>closeTime</key>
-		<string>22：00PM</string>
-		<key>totalFloor</key>
-		<string>4</string>
-		<key>doorDirection</key>
-		<string>西</string>
-		<key>position</key>
-		<string>学校中部</string>
-		<key>function</key>
-		<string>阅览室 自习室</string>
-		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
-	</dict>
-	<key>building - 12</key>
-	<dict>
-		<key>buildingID</key>
-		<string>0</string>
-		<key>imageName</key>
-		<string>small_0</string>
-		<key>detailImageName</key>
-		<string></string>
-		<key>buildingName</key>
-		<string>新科研楼</string>
-		<key>latitude</key>
-		<string>39.9627897742</string>
-		<key>longtitude</key>
-		<string>116.3529222963</string>
-		<key>openTime</key>
-		<string>07：00AM</string>
-		<key>closeTime</key>
-		<string>22：00PM</string>
-		<key>totalFloor</key>
-		<string>4</string>
-		<key>doorDirection</key>
-		<string>西</string>
-		<key>position</key>
-		<string>学校中部</string>
-		<key>function</key>
-		<string>阅览室 自习室</string>
-		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
-	</dict>
-	<key>building - 13</key>
-	<dict>
-		<key>buildingID</key>
-		<string>0</string>
-		<key>imageName</key>
-		<string>small_0</string>
-		<key>detailImageName</key>
-		<string></string>
-		<key>buildingName</key>
-		<string>学生食堂（老食堂）</string>
-		<key>latitude</key>
-		<string>39.9617467742</string>
-		<key>longtitude</key>
-		<string>116.3530752963</string>
-		<key>openTime</key>
-		<string>07：00AM</string>
-		<key>closeTime</key>
-		<string>22：00PM</string>
-		<key>totalFloor</key>
-		<string>4</string>
-		<key>doorDirection</key>
-		<string>西</string>
-		<key>position</key>
-		<string>学校中部</string>
-		<key>function</key>
-		<string>阅览室 自习室</string>
-		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
-	</dict>
-	<key>building - 14</key>
-	<dict>
-		<key>buildingID</key>
-		<string>0</string>
-		<key>imageName</key>
-		<string>small_0</string>
-		<key>detailImageName</key>
-		<string></string>
-		<key>buildingName</key>
-		<string>教工餐厅</string>
-		<key>latitude</key>
-		<string>39.9620437742</string>
-		<key>longtitude</key>
-		<string>116.3524432963</string>
-		<key>openTime</key>
-		<string>07：00AM</string>
-		<key>closeTime</key>
-		<string>22：00PM</string>
-		<key>totalFloor</key>
-		<string>4</string>
-		<key>doorDirection</key>
-		<string>西</string>
-		<key>position</key>
-		<string>学校中部</string>
-		<key>function</key>
-		<string>阅览室 自习室</string>
-		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>补办学生卡，另外一部分辅导员在内办公。</string>
 	</dict>
 	<key>building - 15</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -452,26 +452,26 @@
 		<key>longtitude</key>
 		<string>116.3511391461</string>
 		<key>openTime</key>
-		<string>07：00AM</string>
+		<string>09：00AM</string>
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>2</string>
 		<key>doorDirection</key>
 		<string>西</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校北部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>活动场所</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string></string>
 	</dict>
 	<key>building - 16</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -485,22 +485,22 @@
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>6</string>
 		<key>doorDirection</key>
 		<string>西</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校北部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>公寓</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string></string>
 	</dict>
 	<key>building - 17</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -514,22 +514,22 @@
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>2</string>
 		<key>doorDirection</key>
 		<string>西</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校东部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>办公</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>户籍、调监控等</string>
 	</dict>
 	<key>building - 18</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -545,20 +545,20 @@
 		<key>totalFloor</key>
 		<string>4</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>东</string>
 		<key>position</key>
 		<string>学校中部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>食堂</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>每层各有特色。</string>
 	</dict>
 	<key>building - 19</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -572,22 +572,22 @@
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>15</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>南</string>
 		<key>position</key>
 		<string>学校中部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>公寓</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>地下有台球厅、修电脑。</string>
 	</dict>
 	<key>building - 20</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -601,22 +601,22 @@
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>15</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>北</string>
 		<key>position</key>
 		<string>学校中部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>公寓</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>地下有教职工活动室。</string>
 	</dict>
 	<key>building - 21</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -630,22 +630,22 @@
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>6</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>南</string>
 		<key>position</key>
 		<string>学校中部</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>公寓</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string></string>
 	</dict>
 	<key>building - 22</key>
 	<dict>
 		<key>buildingID</key>
 		<string>0</string>
 		<key>imageName</key>
-		<string>small_0</string>
+		<string></string>
 		<key>detailImageName</key>
 		<string></string>
 		<key>buildingName</key>
@@ -659,15 +659,15 @@
 		<key>closeTime</key>
 		<string>22：00PM</string>
 		<key>totalFloor</key>
-		<string>4</string>
+		<string>15</string>
 		<key>doorDirection</key>
-		<string>西</string>
+		<string>北</string>
 		<key>position</key>
-		<string>学校中部</string>
+		<string>学校西北</string>
 		<key>function</key>
-		<string>阅览室 自习室</string>
+		<string>公寓</string>
 		<key>remark</key>
-		<string>开放时间每天都不一定，见下表</string>
+		<string>地下有商店，打印室。</string>
 	</dict>
 </dict>
 </plist>

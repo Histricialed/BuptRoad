@@ -7,8 +7,18 @@
 //
 
 #import "BRBuildingDetailViewController.h"
+#import "BRBuildingModel.h"
 
 @interface BRBuildingDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *bigImage;
+@property (weak, nonatomic) IBOutlet UILabel *doorDirection;
+@property (weak, nonatomic) IBOutlet UILabel *position;
+@property (weak, nonatomic) IBOutlet UILabel *totalFloor;
+@property (weak, nonatomic) IBOutlet UILabel *function;
+@property (weak, nonatomic) IBOutlet UILabel *openTime;
+@property (weak, nonatomic) IBOutlet UILabel *closeTime;
+@property (weak, nonatomic) IBOutlet UITextView *remark;
+
 
 @end
 
@@ -16,7 +26,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = self.buildingModel.buildingName;
+    [self initLabels];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)initLabels {
+    if ([self.buildingModel.detailImageName length]) {
+        self.bigImage.image = [UIImage imageNamed:self.buildingModel.detailImageName];
+    } else {
+        self.bigImage.image = [UIImage imageNamed:@"noimagebig"];
+    }
+    self.doorDirection.text = self.buildingModel.doorDirection;
+    self.position.text = self.buildingModel.position;
+    self.totalFloor.text = self.buildingModel.totalFloor;
+    self.function.text = self.buildingModel.function;
+    self.openTime.text = self.buildingModel.openTime;
+    self.closeTime.text = self.buildingModel.closeTime;
+    self.remark.text = self.buildingModel.remark;
+    self.remark.font = [UIFont systemFontOfSize:18.0f];
 }
 
 - (void)didReceiveMemoryWarning {

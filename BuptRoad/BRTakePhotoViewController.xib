@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BRTakePhotoViewController">
@@ -16,22 +17,38 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXh-a2-M4D">
-                    <rect key="frame" x="141" y="263" width="92" height="40"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                    <state key="normal" title="点此拍照"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXh-a2-M4D">
+                    <rect key="frame" x="113" y="209" width="149" height="149"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XXh-a2-M4D" secondAttribute="height" multiplier="1:1" id="JGi-4C-kzq"/>
+                        <constraint firstAttribute="width" constant="149" id="JYe-Z0-cO9"/>
+                    </constraints>
+                    <state key="normal" image="icon_camera">
+                        <color key="titleColor" red="0.23921568627450979" green="0.90980392156862744" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="dH7-l5-iN5"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击拍照按钮进入建筑物识别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCi-Xu-dGM">
+                    <rect key="frame" x="77" y="400" width="221" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.25490196079999999" green="0.86534114275100504" blue="0.73398637974563752" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="vCi-Xu-dGM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5kT-nV-IDK"/>
                 <constraint firstItem="XXh-a2-M4D" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="gAM-AX-ZXf"/>
                 <constraint firstItem="XXh-a2-M4D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tAi-5t-KTh"/>
+                <constraint firstItem="vCi-Xu-dGM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="77" id="ysk-Ix-Zfi"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="560.5" y="495.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon_camera" width="200" height="200"/>
+    </resources>
 </document>

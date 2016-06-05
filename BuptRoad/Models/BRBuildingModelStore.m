@@ -40,7 +40,7 @@
 }
 
 - (BRBuildingModel *)createItemByBuildingID:(NSString *)buildingID {
-    BRBuildingModel *item = [BRBuildingModel buildingInfoByBuildingID:buildingID];
+    BRBuildingModel *item = [BRBuildingModel buildingInfoByBuildingID:[NSString stringWithFormat:@"building - %@",buildingID]];
     [self.privateItems addObject:item];
     return item;
 }

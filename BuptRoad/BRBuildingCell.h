@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *buildingName;
 @property (weak, nonatomic) IBOutlet UILabel *function;
 @property (weak, nonatomic) IBOutlet UILabel *location;
+@property (weak, nonatomic) IBOutlet UIView *view;
 
 @end

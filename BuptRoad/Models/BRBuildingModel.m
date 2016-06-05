@@ -17,6 +17,7 @@
 
 - (id)initWithBuildingID:(NSNumber *)buildingID
                    imageName:(NSString *)imageName
+             detailImageName:(NSString *)detailImageName
                 buildingName:(NSString *)buildingName
                     latitude:(double)latitude
                   longtitude:(double)longtitude
@@ -32,6 +33,7 @@
     if (self) {
         self.buildingID = buildingID;
         self.imageName = imageName;
+        self.detailImageName = detailImageName;
         self.buildingName = buildingName;
         self.latitude = latitude;
         self.longtitude = longtitude;
@@ -46,6 +48,7 @@
     return self;
 }
 
+
 + (NSDictionary *)sharedDictionary {
     static NSDictionary *sharedDictionary = nil;
     
@@ -58,12 +61,11 @@
 }
 
 + (id)buildingInfoByBuildingID:(NSString *)buildingID {
-//    NSDictionary *dict = [self sharedDictionary];
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"buildinginfo" ofType:@"plist"];
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    NSDictionary *dict = [self sharedDictionary];
     NSDictionary *tempDict = [NSDictionary dictionaryWithDictionary:[dict objectForKey:buildingID]];
     BRBuildingModel *building = [[self alloc] initWithBuildingID:[NSNumber numberWithInt:0]
                                                        imageName:[NSString stringWithFormat:@"%@",[tempDict objectForKey:@"imageName"]]
+                                                 detailImageName:[NSString stringWithFormat:@"%@",[tempDict objectForKey:@"detailImageName"]]
                                                     buildingName:[NSString stringWithFormat:@"%@",[tempDict objectForKey:@"buildingName"]]
                                                         latitude:[NSString stringWithFormat:@"%@",[tempDict objectForKey:@"latitude"]].doubleValue
                                                       longtitude:[NSString stringWithFormat:@"%@",[tempDict objectForKey:@"longtitude"]].doubleValue

@@ -15,6 +15,9 @@
 		820567831CF835B300EF1768 /* BRBuildingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 820567821CF835B300EF1768 /* BRBuildingModel.m */; };
 		820567861CF83B7000EF1768 /* BRBuildingModelStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 820567851CF83B7000EF1768 /* BRBuildingModelStore.m */; };
 		8205678B1CF84D5400EF1768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820567891CF84D5400EF1768 /* Assets.xcassets */; };
+		8248BFCF1D041B1C000786DB /* BRMatchingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8248BFCE1D041B1C000786DB /* BRMatchingModel.m */; };
+		825576DC1CFEC95F00806992 /* BRBuildingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825576DA1CFEC95F00806992 /* BRBuildingDetailViewController.m */; };
+		825576DD1CFEC95F00806992 /* BRBuildingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 825576DB1CFEC95F00806992 /* BRBuildingDetailViewController.xib */; };
 		82BC34ED1CEDC1A100E8E7A6 /* CustomImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */; };
 		82BC34EE1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BC34EC1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m */; };
 		82BC34F01CEDC55600E8E7A6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC34EF1CEDC55500E8E7A6 /* CoreLocation.framework */; };
@@ -60,6 +63,11 @@
 		820567841CF83B7000EF1768 /* BRBuildingModelStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRBuildingModelStore.h; path = Models/BRBuildingModelStore.h; sourceTree = "<group>"; };
 		820567851CF83B7000EF1768 /* BRBuildingModelStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRBuildingModelStore.m; path = Models/BRBuildingModelStore.m; sourceTree = "<group>"; };
 		820567891CF84D5400EF1768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8248BFCD1D041B1C000786DB /* BRMatchingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRMatchingModel.h; path = Models/BRMatchingModel.h; sourceTree = "<group>"; };
+		8248BFCE1D041B1C000786DB /* BRMatchingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRMatchingModel.m; path = Models/BRMatchingModel.m; sourceTree = "<group>"; };
+		825576D91CFEC95F00806992 /* BRBuildingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBuildingDetailViewController.h; sourceTree = "<group>"; };
+		825576DA1CFEC95F00806992 /* BRBuildingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRBuildingDetailViewController.m; sourceTree = "<group>"; };
+		825576DB1CFEC95F00806992 /* BRBuildingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRBuildingDetailViewController.xib; sourceTree = "<group>"; };
 		82BC34E91CEDC1A100E8E7A6 /* CustomImagePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImagePickerView.h; sourceTree = "<group>"; };
 		82BC34EA1CEDC1A100E8E7A6 /* CustomImagePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImagePickerView.m; sourceTree = "<group>"; };
 		82BC34EB1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Addition.h"; sourceTree = "<group>"; };
@@ -145,6 +153,8 @@
 				820567821CF835B300EF1768 /* BRBuildingModel.m */,
 				820567841CF83B7000EF1768 /* BRBuildingModelStore.h */,
 				820567851CF83B7000EF1768 /* BRBuildingModelStore.m */,
+				8248BFCD1D041B1C000786DB /* BRMatchingModel.h */,
+				8248BFCE1D041B1C000786DB /* BRMatchingModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -258,6 +268,9 @@
 				8205676F1CF6FABC00EF1768 /* BRBuildingCell.xib */,
 				820567721CF6FDC800EF1768 /* BRBuildingListTableViewController.h */,
 				820567731CF6FDC800EF1768 /* BRBuildingListTableViewController.m */,
+				825576D91CFEC95F00806992 /* BRBuildingDetailViewController.h */,
+				825576DA1CFEC95F00806992 /* BRBuildingDetailViewController.m */,
+				825576DB1CFEC95F00806992 /* BRBuildingDetailViewController.xib */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -371,6 +384,7 @@
 			files = (
 				82F19F241CE42B2A0025E75B /* LaunchScreen.storyboard in Resources */,
 				820567711CF6FABC00EF1768 /* BRBuildingCell.xib in Resources */,
+				825576DD1CFEC95F00806992 /* BRBuildingDetailViewController.xib in Resources */,
 				82F19F531CE5DBFA0025E75B /* BRMapViewController.xib in Resources */,
 				82F19F4B1CE5D32C0025E75B /* BRTakePhotoViewController.xib in Resources */,
 				8205678B1CF84D5400EF1768 /* Assets.xcassets in Resources */,
@@ -451,6 +465,7 @@
 				82F19F4A1CE5D32C0025E75B /* BRTakePhotoViewController.m in Sources */,
 				82F19F161CE42B2A0025E75B /* AppDelegate.m in Sources */,
 				820567861CF83B7000EF1768 /* BRBuildingModelStore.m in Sources */,
+				8248BFCF1D041B1C000786DB /* BRMatchingModel.m in Sources */,
 				820567741CF6FDC800EF1768 /* BRBuildingListTableViewController.m in Sources */,
 				82BC34ED1CEDC1A100E8E7A6 /* CustomImagePickerView.m in Sources */,
 				82BC34EE1CEDC1A100E8E7A6 /* UIImagePickerController+Addition.m in Sources */,
@@ -459,6 +474,7 @@
 				82F19F521CE5DBFA0025E75B /* BRMapViewController.m in Sources */,
 				82F19F1F1CE42B2A0025E75B /* BuptRoad.xcdatamodeld in Sources */,
 				82F19F131CE42B2A0025E75B /* main.m in Sources */,
+				825576DC1CFEC95F00806992 /* BRBuildingDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

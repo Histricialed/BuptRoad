@@ -13,6 +13,7 @@
 
 @property (nonatomic, assign) NSNumber *buildingID;
 @property (nonatomic, copy) NSString *imageName;
+@property (nonatomic, copy) NSString *detailImageName;
 @property (nonatomic, copy) NSString *buildingName;
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longtitude;
@@ -24,12 +25,15 @@
 @property (nonatomic, copy) NSString *position;
 @property (nonatomic, copy) NSString *function;
 @property (nonatomic, copy) NSString *remark;
+@property (nonatomic, assign) double distance;
+@property (nonatomic, assign) double angle;
 
 - (id)initWithBuildingID:(NSNumber *)buildingID
-                   imageName:(NSString *)imageName
+               imageName:(NSString *)imageName
+         detailImageName:(NSString *)detailImageName
                 buildingName:(NSString *)buildingName
                     latitude:(double)latitude
-                  longtitude:(double)longtitude
+                  longtitude:(double)loångtitude
                     openTime:(NSString *)openTime
                    closeTime:(NSString *)closeTime
                   totalFloor:(NSString *)totalFloor

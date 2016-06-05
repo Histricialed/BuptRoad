@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+@class BRBuildingModel;
+
 @interface BRAreaModel : NSObject
 
 @property (nonatomic, strong) CLLocation *currentLocation;
@@ -16,6 +18,6 @@
 @property (nonatomic, assign) double radius;
 
 - (instancetype)init;
-- (BOOL)isPoint:(double)latitude and:(double)longtitude InArea:(BRAreaModel *)area;
+- (BOOL)isBuildingInArea:(BRBuildingModel *)building;
 
 @end

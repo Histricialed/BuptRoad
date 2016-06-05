@@ -24,7 +24,7 @@
         self.tabBarItem.title = @"建筑列表";
         UIImage *tabIcon = [UIImage imageNamed:@"icon_tabbar_camera"];
         self.tabBarItem.image = tabIcon;
-        for (int i = 0; i < 13; i++) {
+        for (int i = 0; i < 23; i++) {
             [[BRBuildingModelStore sharedStore] createItemByBuildingID:[NSString stringWithFormat:@"%d",i]];
         }
     }
@@ -67,13 +67,12 @@
     cell.location.text = building.position;
     cell.function.text = building.function;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 101;
+    return 110;
 }
 
 /*

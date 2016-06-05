@@ -9,6 +9,8 @@
 #import "CustomImagePickerView.h"
 #import <CoreLocation/CoreLocation.h>
 #import "BRAreaModel.h"
+#import "BRMatchingModel.h"
+#import "BRBuildingModel.h"
 #import "Masonry.h"
 #import "CONST.h"
 
@@ -27,6 +29,7 @@
 @property (nonatomic, weak) UIImageView *mask;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) BRAreaModel *area;
+@property (nonatomic, strong) BRBuildingModel *matchedBuilding;
 @property (nonatomic, assign) BOOL isDisplay;
 
 @end
@@ -113,7 +116,6 @@
     self.tipLabel.textAlignment = NSTextAlignmentCenter;
     self.tipLabel.textColor = [UIColor whiteColor];
     
-    self.resultLabel.text = @"搜狐网络大厦";
     self.resultLabel.textAlignment = NSTextAlignmentCenter;
     self.resultLabel.textColor = [UIColor whiteColor];
     self.resultLabel.backgroundColor = [UIColor grayColor];
@@ -138,16 +140,16 @@
     self.photoImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.usePhotoBtn.frame = CGRectMake(SCREEN_WIDTH - 110, SCREEN_HEIGHT - 85, 80, 50);
     [self.usePhotoBtn setTitle:@"确定" forState:UIControlStateNormal];
+    [self.locationManager startUpdatingLocation];
+    [self.locationManager startUpdatingHeading];
 }
 
 - (void)shutterCamera {
     [self.imageViewController takePicture];
-    
-    double x = 39.9918353308;
-    double y = 116.3262000682;
-    self.isDisplay = [self.area isPoint:x and:y InArea:self.area];
-    if (self.area.currentHeading) {
-        NSLog(@"heading:%f  coordinate:%f,%f result:%@",self.area.currentHeading.trueHeading,self.area.currentLocation.coordinate.latitude,self.area.currentLocation.coordinate.longitude,[self.area isPoint:x and:y InArea:self.area]?@"YES":@"NO");
+    self.resultLabel.text = @"没有匹配到建筑物";
+    self.matchedBuilding = [[BRMatchingModel sharedInstance] matchingBuildingsInArea:self.area];
+    if (self.matchedBuilding) {
+        self.resultLabel.text = self.matchedBuilding.buildingName;
     }
 }
 
@@ -157,6 +159,7 @@
         self.area.currentHeading = [[CLHeading alloc] init];
     }
     self.area.currentHeading = newHeading;
+    NSLog(@"heading:%@",newHeading);
 }
 
 
@@ -166,6 +169,7 @@
         self.area.currentLocation = [[CLLocation alloc] init];
     }
     self.area.currentLocation = currLocation;
+    NSLog(@"currLocation:%@",currLocation);
 }
 
 - (void)cancle:(UIButton *)sender {
@@ -206,7 +210,7 @@
 - (void)hideControls {
     self.photoImageView.hidden = NO;
     self.usePhotoBtn.hidden = NO;
-    self.resultLabel.hidden = !self.isDisplay;
+    self.resultLabel.hidden = NO;
     self.mask.hidden = YES;
     self.tipLabel.hidden = YES;
     [self.cancleBtn setTitle:@"重拍" forState:UIControlStateNormal];

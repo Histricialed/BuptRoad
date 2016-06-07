@@ -12,21 +12,21 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3FS-Y5-m01" id="siG-bN-B5A">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDg-L5-uOA">
-                        <rect key="frame" x="12" y="5" width="296" height="99.5"/>
+                        <rect key="frame" x="12" y="5" width="296" height="100"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exw-KU-V49">
-                                <rect key="frame" x="0.0" y="0.0" width="1" height="99.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1" height="100"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="0.5" id="N3U-fi-ygu"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGT-XU-eb1">
-                                <rect key="frame" x="295" y="0.0" width="1" height="99.5"/>
+                                <rect key="frame" x="295" y="0.0" width="1" height="100"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="0.5" id="n7g-NR-EZt"/>
@@ -41,7 +41,7 @@
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8D1-BR-QIr">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8D1-BR-QIr">
                                 <rect key="frame" x="1" y="98" width="294" height="1"/>
                                 <color key="backgroundColor" white="0.90879420229999996" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
